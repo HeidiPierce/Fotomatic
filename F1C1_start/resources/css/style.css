@@ -54,12 +54,10 @@ header {
 .feature h2 {
   padding-top: 40px;
 }
-#filters-section {
-}
 #filters-section .images-container {
   display: flex;
   flex-direction: row;
-
+  padding: 0 1%;
 }
 #filters-section .images-container img {
   width: 100%;
@@ -85,6 +83,7 @@ header {
   line-height: 1.1;
   padding-right: 30;
 }
+
   @media only screen and (max-width: 760px) {
     /* Header */
     header {
@@ -327,7 +326,9 @@ header {
     header {
       height: 48px;
     }
-
+    header .content {
+      padding: .6rem 0;
+    }
     #sign-up-section {
       height: 20rem;
    }
@@ -337,7 +338,6 @@ header {
     #sign-up-cta h2 {
       font-size: 2rem;
     }
-
   /* Features Section */
   #features-section {
     display: flex;
@@ -367,10 +367,10 @@ header {
     color: #4a4a4a;
     padding-bottom: 30px;
   }
-  #filters-section .content-center h2 {
+  #filters-section .content h2 {
     padding-top: 20px;
   }
-  #filter-section .content-center h3 {
+  #filters-section .content h3 {
     padding-bottom: 20px;
   }
   .content h2 {
@@ -381,14 +381,18 @@ header {
     font-size: 14px;
     line-height: 1.4;
   }
+  #quotes-section {
+    padding: 25px 20px 5px;
+  }
   .quote {
     font-size: 24px;
     line-height: 1.4;
     text-align: center;
   }
   .quote-citation {
-    padding-top: 20px;
+    padding: 20px;
   }
+
 @media only screen and (max-width: 890px) {
   .feature h2 {
     font-size: 1.125rem;
