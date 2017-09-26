@@ -1,8 +1,9 @@
 /* Universal Styles */
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: "Helvetica", sans-serif;
   font-size: 16px;
+  background-color: #F4F6F6;
 }
 header {
   position: fixed;
@@ -19,6 +20,7 @@ header .content {
   padding: 1.875rem;
   white-space: nowrap;
   overflow: hidden;
+  width: 100%;
 }
 header .content {
   padding: .5rem 0;
@@ -32,7 +34,6 @@ nav li {
 nav a {
   vertical-align: bottom;
   line-height: 1.6;
-  font-size: 1rem;
   color: #4a4a4a;
 }
 header .icon {
@@ -48,15 +49,11 @@ header .tablet {
 header .mobile {
   display: none;
 }
-header .desktop logo {
-
+header .logo {
+  flex: 1;
 }
-a.logo {
+.logo {
   font-size: 23px;
-  padding-right: 40px
-
-}
-nav li:first-child {
   padding-left: 30px;
 }
 .main-content {
@@ -77,23 +74,41 @@ nav li:first-child {
 .image-container {
   overflow: hidden;
 }
-
-.image-container img {
-  display: block;
-  width: 100%;
-  height: 65%;
-}
 #features-section {
-  padding: 2rem 2rem 3rem;
+  padding: 4rem 2.375rem 2.875rem;
+  display: flex;
+  flex-direction: row;
 }
-
 .feature .image-container {
   width: 90%;
   height: 65%;
   margin: 0 auto;
 }
+.feature {
+  background-color: white;
+  margin: 0 1.25rem;
+  text-align: center;
+}
+.feature img {
+  display: block;
+  width: 100%;
+  padding-top: 32px;
+}
 .feature h2 {
   padding-top: 40px;
+  font-weight: bold;
+  font-size: 36px;
+  color: #4A4A4A;
+  line-height: 1.2;
+}
+.feature h3 {
+  color: #4A4A4A;
+  line-height: 1.2;
+  padding-bottom: 26px;
+}
+#filters-section {
+  background-color: #4A4A4A;
+  color: white;
 }
 #filters-section .images-container {
   display: flex;
@@ -108,10 +123,13 @@ nav li:first-child {
   padding-top: 64px;
   font-size: 36px;
   opacity: 1.0;
+  font-weight: bold;
+  padding-bottom: 10px;
 }
 #filters-section .content h3 {
   padding-bottom: 80px;
   font-size: 16px;
+  font-weight: lighter;
   line-height: 1.4;
 }
 #quotes-section {
@@ -131,7 +149,14 @@ nav li:first-child {
       display: none;
     }
     header .tablet {
-      display: block;
+      display: flex;
+      width: 100%;
+    }
+    header .tablet ul {
+      width: 98%;
+    }
+    nav li {
+      padding-left: 1.75rem;
     }
     .tablet li:nth-child(2) {
       margin-left: auto;
@@ -139,36 +164,24 @@ nav li:first-child {
     header .mobile {
       display: none;
     }
-    .logo {
-      font-size: 23px;
-      padding-left: 30px;
-    }
     a.logo {
       padding-left: 0;
     }
-    header .mobile ul {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      width: 100%;
-    }
-    header .mobile li {
-      /* padding: 0; */
-
-    }
     .button {
+      font-size: 20px;
       padding: .1875rem .5rem;
       background-color: #9dc20b;
-      line-height: 1.6;
+      line-height: 1.4;
       color: white;
       border-radius: 4px;
     }
-
+    nav li:first-child {
+      padding-left: 30px;
+    }
     /*main content section*/
     .main-content {
       top: 2.5625rem;
     }
-
     /* Sign Up Section */
     #sign-up-section {
       display: flex;
@@ -236,15 +249,19 @@ nav li:first-child {
     }
 
     /*features section*/
-
-    .feature {
-      margin: 0;
-      padding: 1.25rem 1rem 0 1rem;
-    }
     #features-section {
-      flex-flow: column nowrap;
-      padding: 0;
-  }
+      padding: 1.5rem 1.3rem 1.8rem;
+    }
+    .feature {
+      margin: 0 .5rem;
+      padding: 0 1.5rem;
+    }
+    .feature img {
+      padding-top: 20px;
+    }
+    .feature .center {
+      text-align: left;
+    }
     /* Filters Section */
     #filters-section {
       padding: 4rem 0;
@@ -358,6 +375,12 @@ nav li:first-child {
       display: block;
       width: 100%;
     }
+    header .mobile ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+    }
     nav li:last-child {
       padding-left: 100px;
     }
@@ -373,9 +396,10 @@ nav li:first-child {
   /* Features Section */
   #features-section {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     background-color: #f3f3f3;
-
+    padding: 0;
   }
   .feature {
     flex: 1;
@@ -385,6 +409,9 @@ nav li:first-child {
   }
   .feature:first-child {
     background-color: lightgrey;
+  }
+  .feature .center {
+    text-align: center;
   }
   .feature h2 {
     padding-bottom: .5rem;
