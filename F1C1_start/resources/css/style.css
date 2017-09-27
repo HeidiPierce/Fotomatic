@@ -123,7 +123,7 @@ header .logo {
   padding-top: 64px;
   font-size: 36px;
   opacity: 1.0;
-  font-weight: bold;
+  font-weight: bolder;
   padding-bottom: 10px;
 }
 #filters-section .content h3 {
@@ -280,24 +280,30 @@ footer .copyright {
     }
     .feature {
       margin: 0 .5rem;
-      padding: 0 10px;
       }
     .feature .image-container {
       margin: 0 auto;
+      padding-top: 20px;
     }
     .feature .center {
       text-align: left;
     }
     .feature img {
-      padding-top: 20px;
-      margin: 0 auto;
+      padding: 0;
     }
     .feature .content {
-      margin-left: 30px;
+     width: 100%;
+     padding: 0 20px;
     }
     .feature h2 {
       white-space: normal;
+      font-size: 30px;
     }
+    .feature h3 {
+      padding-bottom: 45px;
+      width: 90%;
+    }
+
     /* Filters Section */
     #filters-section {
       padding: 4rem 0;
@@ -325,18 +331,15 @@ footer .copyright {
 
     /* Quotes Section */
 
-    #quotes-section content {
+    #quotes-section .content {
       padding: 1.875rem .625rem;
+      display: flex;
     }
-    #quotes-section quote {
-      font-size: 1.5rem;
-      line-height: 1.4;
+    .quote {
+    padding-right: 0;
     }
     .quote-citation {
-      display: block;
-      padding-top: 1rem;
-      margin: auto;
-      padding-top: 20px;
+
     }
 
 
@@ -360,12 +363,19 @@ footer .copyright {
     }
     header .mobile ul {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       width: 100%;
     }
+    nav li {
+      padding-left: 3.5rem;
+    }
+    nav li:first-child {
+      padding-left: 15px;
+    }
     nav li:last-child {
       padding-left: 100px;
+      padding-right: 15px;
     }
     #sign-up-section {
       height: 20rem;
@@ -430,12 +440,17 @@ footer .copyright {
   #quotes-section {
     padding: 32px 20px 5px;
   }
+  #quotes-section .content {
+    display: block;
+  }
   .quote {
     font-size: 24px;
     line-height: 1.4;
     text-align: center;
   }
   .quote-citation {
+    display: block;
+    margin: auto;
     padding: 15px;
   }
   footer {
