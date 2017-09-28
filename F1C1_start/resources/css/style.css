@@ -1,10 +1,10 @@
 /* Universal Styles */
-
 html {
   font-family: "Helvetica", sans-serif;
   font-size: 16px;
   background-color: #F4F6F6;
 }
+/*header*/
 header {
   position: fixed;
   width: 100%;
@@ -17,19 +17,19 @@ header {
 header .content {
   display: flex;
   align-items: center;
-  padding: 1.875rem;
+  padding: .5rem 0;
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
-}
-header .content {
-  padding: .5rem 0;
 }
 header nav ul {
   display: flex;
 }
 nav li {
   padding-left: 3.5rem;
+}
+nav li:last-child {
+  padding-right: 30px;
 }
 nav a {
   vertical-align: bottom;
@@ -40,9 +40,6 @@ header .icon {
   width: 1rem;
   padding-left: .75rem;
 }
-header .desktop {
-  display: block;
-}
 header .tablet {
   display: none;
 }
@@ -51,31 +48,65 @@ header .mobile {
 }
 header .logo {
   flex: 1;
-}
-.logo {
   font-size: 23px;
   padding-left: 30px;
 }
+/*main content section*/
 .main-content {
   position: relative;
   top: 5.3125rem; /* To offset for fixed header. */
 }
+/*sign-up box*/
 #sign-up-section {
   background: url("../images/banner-landingpage.jpg") no-repeat bottom;
   background-size: cover;
   height: 43.5rem;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
+}
+#sign-up-cta {
+  padding: 2rem 5rem 3.45rem;
+  border: solid 1px #979797;
+  border-radius: 4px;
+  background-color: #9dc20b;
+  position: static;
+  margin-left: 100px;
+}
+#sign-up-cta .content {
+  width: 25.625rem;
+  margin-top: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: white;
 }
 .center {
   text-align: center;
 }
+#sign-up-cta span strong {
+  font-weight: bold;
+}
+#sign-up-cta .cursive {
+  font-family: "Damion", cursive;
+  font-size: 2.25rem;
+}
+#sign-up-cta .striking {
+  font-family: "Rubik", sans-serif;
+  padding-bottom: .75rem;
+  font-size: 3.125rem;
+}
+.button {
+  margin-top: 1.625rem;
+  background-color: #4A4A4A;
+  width: 408px;
+  height: 64px;
+  border-radius: 4px;
+  padding-top: 20px;
+}
+/*feaures section*/
 #features-section {
   padding: 4rem 2.375rem 2.875rem;
   display: flex;
-  flex-direction: row;
-
 }
 .feature .image-container {
   width: 90%;
@@ -93,7 +124,7 @@ header .logo {
   padding: 32px 16px 0;
 }
 .feature h2 {
-  padding: 40px 0 10px;
+  padding: 40px 0 5px;
   font-weight: bold;
   font-size: 36px;
   color: #4A4A4A;
@@ -106,6 +137,7 @@ header .logo {
   line-height: 1.2;
   padding-bottom: 65px;
 }
+/*filters section*/
 #filters-section {
   background-color: #4A4A4A;
   color: white;
@@ -113,33 +145,28 @@ header .logo {
 #filters-section .images-container {
   display: flex;
   flex-direction: row;
-  padding: 0 1%;
+  padding: 0 1% 64px;
 }
 #filters-section .images-container img {
   width: 100%;
   height: auto;
 }
 #filters-section .content h2 {
-  padding-top: 64px;
+  padding-top: 64px 0 10px;
   font-size: 36px;
   opacity: 1.0;
   font-weight: bolder;
-  padding-bottom: 10px;
 }
 #filters-section .content h3 {
   padding-bottom: 80px;
   font-size: 16px;
   font-weight: lighter;
   line-height: 1.4;
-  width: 100%;
 }
 /*quote section*/
 #quotes-section {
   background-color: #f3f3f3;
   padding: 80px 0;
-}
-#quotes-section content {
-  padding: 5rem 0;
 }
 .quote {
   padding-right: 1.875rem;
@@ -163,12 +190,10 @@ footer .content {
   display: flex;
   font-size: .75rem;
 }
-footer .content {
-  font-size: .75rem;
-}
 footer .copyright {
   flex-grow: 1;
 }
+
   @media only screen and (max-width: 767px) {
     /* Header */
     header .desktop {
@@ -204,76 +229,23 @@ footer .copyright {
     nav li:first-child {
       padding-left: 30px;
     }
-    /*main content section*/
-    .main-content {
-      top: 2.5625rem;
+    nav li:last-child {
+      padding-right: 0;
     }
     /* Sign Up Section */
     #sign-up-section {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      height: 43.5rem;
-    }
-    #sign-up-section {
-      align-items: center;
-      justify-content: center;
       height: 28rem;
     }
     #sign-up-cta {
-      padding: 0 5rem 2.5rem 5rem;
-      border: solid 1px #979797;
-      border-radius: 4px;
-      background-color: #9dc20b;
+      visibility: hidden;
     }
-    #sign-up-cta {
-      position: static;
-      width: auto;
-      height: auto;
-      background-color: transparent;
-      border: none;
+    #sign-up-cta .header {
+      margin-top: 3rem;
     }
-    #sign-up-cta .content {
-      width: 25.625rem;
-      margin-top: 2rem;
-      font-family: "Roboto", sans-serif;
-      font-size: 1.25rem;
-      line-height: 1.4;
-      color: white;
+    .header {
+      visibility: visible;
+      position: absolute;
     }
-    #sign-up-cta .content {
-      margin-top: 0;
-    }
-    #sign-up-cta h1 {
-      font-size: 3.125rem;
-    }
-    #sign-up-cta h1 {
-      font-size: 3.125rem;
-    }
-    #sign-up-cta h2 {
-      font-size: 2.25rem;
-    }
-    #sign-up-cta h2 {
-      font-size: 2.25rem;
-    }
-    #sign-up-cta span strong {
-      font-weight: bold;
-    }
-    #sign-up-cta .cursive {
-      font-family: "Damion", cursive;
-    }
-    #sign-up-cta .striking {
-      font-family: "Rubik", sans-serif;
-      padding-bottom: .75rem;
-    }
-    #sign-up-cta .email {
-      display: none;
-    }
-    #sign-up-cta .button {
-      margin-top: 1.625rem;
-      padding: 1.25rem 7.25rem;
-    }
-
     /*features section*/
     #features-section {
       padding: 1.5rem 1.3rem 1.8rem;
@@ -303,12 +275,10 @@ footer .copyright {
       padding-bottom: 45px;
       width: 90%;
     }
-
     /* Filters Section */
     #filters-section {
-      padding: 4rem 0;
       background-color: #4a4a4a;
-      padding: 1.5rem 0 0 0;
+      padding: 1.5rem 0 0;
     }
     #filters-section .content {
       padding: 0 .625rem;
@@ -317,7 +287,6 @@ footer .copyright {
     #filters-section .content {
       margin-bottom: 1rem;
     }
-
     #filters-section .images-container {
       max-width: 100%;
       padding: 0 1%;
@@ -328,9 +297,7 @@ footer .copyright {
     #filters-section .extra {
       display: none;
     }
-
     /* Quotes Section */
-
     #quotes-section .content {
       padding: 1.875rem .625rem;
       display: flex;
@@ -338,18 +305,11 @@ footer .copyright {
     .quote {
     padding-right: 0;
     }
-    .quote-citation {
-
-    }
-
-
 
   @media only screen and (max-width: 478px) {
+    /*header*/
     header {
       height: 48px;
-    }
-    header .content {
-      padding: .6rem 0;
     }
     header .desktop {
       display: none;
@@ -374,11 +334,17 @@ footer .copyright {
       padding-left: 15px;
     }
     nav li:last-child {
-      padding-left: 100px;
+      padding: 0 15px 0 100px;
       padding-right: 15px;
     }
+    /*sign-up section*/
     #sign-up-section {
       height: 20rem;
+      background-position: right;
+   }
+   #sign-up-cta {
+     margin: 0;
+     position: static;
    }
     #sign-up-cta h1 {
       font-size: 2.25rem;
@@ -391,21 +357,19 @@ footer .copyright {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #f3f3f3;
     padding: 0;
   }
   .feature {
     margin: 0;
   }
   .feature:first-child {
-    background-color: lightgrey;
+    background-color: #D5DBDB;
   }
   .feature .center {
     text-align: center;
   }
   .feature h2 {
-    padding-bottom: .5rem;
-    padding-top: 20px;
+    padding: 20px 0 .5rem;
     font-size: 2.25rem;
     font-weight: bold;
     color: #4a4a4a;
@@ -417,9 +381,9 @@ footer .copyright {
     color: #4a4a4a;
     padding-bottom: 30px;
   }
+  /*filters section*/
   #filters-section .content h2 {
-    padding-top: 20px;
-    padding-bottom: .625rem;
+    padding: 20px 0 .625rem;
     font-size: 1.125rem;
     line-height: 1.3;
     font-weight: normal;
@@ -429,14 +393,7 @@ footer .copyright {
     font-size: .875rem;
     line-height: 1.4;
   }
-  .content h2 {
-    font-size: 18px;
-    line-height: 1.3;
-  }
-  .content h3 {
-    font-size: 14px;
-    line-height: 1.4;
-  }
+  /*quote section*/
   #quotes-section {
     padding: 32px 20px 5px;
   }
@@ -453,6 +410,7 @@ footer .copyright {
     margin: auto;
     padding: 15px;
   }
+  /*footer*/
   footer {
     padding: 1.5rem .5rem;
   }
@@ -465,7 +423,6 @@ footer .copyright {
     line-height: 1.3;
     font-weight: normal;
   }
-
   .feature h3 {
     font-size: .875rem;
     line-height: 1.4;
